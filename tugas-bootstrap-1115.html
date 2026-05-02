@@ -3,162 +3,317 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tugas Bootstrap 1115</title>
+    <title>RedKit Store - Kaos Pria</title>
     <link rel="stylesheet" href="asset/css/bootstrap.min.css">
     <style>
+      :root {
+        --red: #c9102e;
+        --red-dark: #8f0b20;
+        --ink: #17191f;
+        --muted: #6c737f;
+        --soft: #f5f5f2;
+        --line: #e5e7eb;
+      }
+
+      * {
+        letter-spacing: 0;
+      }
+
       body {
         background-color: #ffffff;
-        color: #42464d;
+        color: var(--ink);
         font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
       }
 
       .page-wrapper {
         width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
+        min-height: 100vh;
         background-color: #ffffff;
       }
 
       .navbar {
-        padding-top: 0.2%;
-        padding-bottom: 0.2%;
-      }
-
-      .navbar-brand,
-      .nav-link {
-        font-size: 82%;
+        padding-top: 0.85rem;
+        padding-bottom: 0.85rem;
+        box-shadow: 0 0.4rem 1.25rem rgba(0, 0, 0, 0.18);
       }
 
       .navbar-brand {
-        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.15rem;
+        font-weight: 800;
       }
 
-      .navbar-nav {
-        gap: 0;
-      }
-
-      .nav-item {
-        background-color: transparent;
-        margin-left: 4%;
-        padding-left: 1%;
-        padding-right: 1%;
-      }
-
-      .nav-item:first-child {
-        margin-left: 0;
+      .brand-logo {
+        width: 2.65rem;
+        height: 2.65rem;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #ffffff;
+        padding: 0.2rem;
       }
 
       .nav-link {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        white-space: nowrap;
-      }
-
-      .hero {
-        width: 100%;
-        padding: 7% 4%;
-        background-color: #2f2f2f;
-      }
-
-      .hero h1 {
-        font-size: 190%;
-        font-weight: 700;
-      }
-
-      .hero p {
-        font-size: 90%;
-      }
-
-      .section-title {
-        font-size: 150%;
-        font-weight: 700;
-      }
-
-      .service-card,
-      .testimonial-card,
-      .pricing-card {
-        border: thin solid #d9dde3;
-        border-radius: 1%;
-      }
-
-      .service-card {
-        min-height: 100%;
-      }
-
-      .card-title {
-        font-size: 90%;
-        font-weight: 700;
-      }
-
-      .card-text,
-      .pricing-card li {
-        font-size: 78%;
-      }
-
-      .btn {
-        font-size: 78%;
+        font-size: 0.98rem;
         font-weight: 600;
       }
 
-      .pricing-header {
-        border-radius: 1% 1% 0 0;
+      .navbar-nav {
+        gap: 1rem;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 82vh;
+        display: flex;
+        align-items: center;
         color: #ffffff;
-        font-size: 78%;
-        font-weight: 700;
-        padding: 3% 5%;
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.25)), url("asset/img/hero-bg.jpg");
+        background-position: center;
+        background-size: cover;
       }
 
-      .pricing-card .price {
-        font-size: 105%;
+      .hero h1 {
+        max-width: 42rem;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .hero p {
+        max-width: 35rem;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 1.2rem;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.36);
+        border-radius: 999px;
+        padding: 0.45rem 0.95rem;
+        background-color: rgba(255, 255, 255, 0.1);
         font-weight: 700;
       }
 
-      .divider {
-        padding-top: 0.6%;
-        background-color: #212529;
+      .btn-red {
+        border-color: var(--red);
+        background-color: var(--red);
+        color: #ffffff;
+      }
+
+      .btn-red:hover,
+      .btn-red:focus {
+        border-color: #e11d3b;
+        background-color: #e11d3b;
+        color: #ffffff;
+      }
+
+      .btn-outline-light:hover {
+        color: var(--ink);
+      }
+
+      .section-space {
+        padding: 5rem 0;
+      }
+
+      .section-eyebrow {
+        margin-bottom: 0.5rem;
+        color: var(--red);
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .section-title {
+        margin-bottom: 0.75rem;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+      }
+
+      .section-lead {
+        max-width: 42rem;
+        color: var(--muted);
+        font-size: 1.05rem;
+      }
+
+      .collection-card,
+      .product-card,
+      .package-card,
+      .testimonial-card {
+        height: 100%;
+        border: 1px solid var(--line);
+        border-radius: 0.5rem;
+        background-color: #ffffff;
+        overflow: hidden;
+      }
+
+      .collection-card {
+        position: relative;
+        min-height: 28rem;
+        color: #ffffff;
+      }
+
+      .collection-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 28rem;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .collection-card:hover img {
+        transform: scale(1.04);
+      }
+
+      .collection-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.5rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.82));
+      }
+
+      .collection-overlay h3,
+      .product-card h3,
+      .package-card h3 {
+        font-size: 1.35rem;
+        font-weight: 800;
+      }
+
+      .product-image {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        background-color: var(--soft);
+      }
+
+      .product-card .price,
+      .package-card .price {
+        color: var(--red-dark);
+        font-size: 1.25rem;
+        font-weight: 900;
+      }
+
+      .size-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2.2rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.25rem 0.55rem;
+        color: var(--muted);
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .band-dark {
+        background-color: var(--ink);
+        color: #ffffff;
+      }
+
+      .band-soft {
+        background-color: var(--soft);
+      }
+
+      .package-card {
+        padding: 2rem;
+      }
+
+      .package-card.featured {
+        border-color: var(--red);
+        box-shadow: 0 1rem 2.5rem rgba(201, 16, 46, 0.16);
+      }
+
+      .package-list {
+        display: grid;
+        gap: 0.65rem;
+        margin: 1.5rem 0;
+        padding: 0;
+        color: var(--muted);
+        list-style: none;
+      }
+
+      .testimonial-card {
+        padding: 1.5rem;
+      }
+
+      .testimonial-avatar {
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .cta-band {
+        position: relative;
+        overflow: hidden;
+        color: #ffffff;
+        background-image: linear-gradient(90deg, rgba(23, 25, 31, 0.9), rgba(143, 11, 32, 0.72)), url("asset/img/supporter-bg.jpg");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .cta-band h2 {
+        font-size: clamp(2rem, 4vw, 3.5rem);
+        font-weight: 900;
       }
 
       footer {
-        background-color: #212529;
-        color: #ffffff;
-        font-size: 78%;
+        background-color: #0f1115;
+        color: rgba(255, 255, 255, 0.78);
       }
 
       footer a {
         color: #ffffff;
+        text-decoration: none;
       }
 
-      @media (max-width: 48em) {
-        .hero {
-          padding: 13% 6%;
-        }
+      footer a:hover {
+        color: #ffccd5;
+      }
 
-        .hero h1 {
-          font-size: 160%;
-        }
-
-        .nav-link {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-        }
-
+      @media (max-width: 61.98rem) {
         .navbar-nav {
-          gap: 0;
+          gap: 0.2rem;
+          padding-top: 1rem;
         }
 
-        .nav-item {
-          margin-left: 0;
-          padding-left: 0;
-          padding-right: 0;
+        .hero {
+          min-height: 74vh;
+        }
+      }
+
+      @media (max-width: 35.98rem) {
+        .hero {
+          min-height: 70vh;
+          text-align: center;
+        }
+
+        .hero p {
+          font-size: 1.05rem;
+        }
+
+        .section-space {
+          padding: 3.5rem 0;
         }
       }
     </style>
   </head>
   <body>
     <div class="page-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-          <a class="navbar-brand" href="#">BrandLogo</a>
+          <a class="navbar-brand" href="#home">
+            <img class="brand-logo" src="asset/img/logo-cloth.jpg" alt="Logo RedKit Store">
+            <span>RedKit Store</span>
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -168,124 +323,286 @@
                 <a class="nav-link active" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#layanan">Layanan</a>
+                <a class="nav-link" href="#koleksi">Koleksi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pricing">Pricing</a>
+                <a class="nav-link" href="#produk">Produk</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#testimoni">Testimonial</a>
+                <a class="nav-link" href="#paket">Paket</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimoni">Testimoni</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <header id="home" class="hero d-flex align-items-center justify-content-center text-center text-white">
-        <div>
-          <h1 class="mb-3">Selamat Datang di Situs Kami</h1>
-          <p class="mb-4">Kami memberikan layanan terbaik untuk kebutuhan Anda</p>
-          <a class="btn btn-primary" href="#layanan">Pelajari Lebih Lanjut</a>
+      <header id="home" class="hero">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <span class="hero-badge">New season collection</span>
+              <h1 class="mb-4">Kaos pria untuk gaya bola yang lebih berani.</h1>
+              <p class="mb-4">Pilih jersey favorit dengan bahan nyaman, tampilan rapi, dan warna yang siap dipakai untuk nonton bareng, futsal, atau outfit harian.</p>
+              <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-sm-start">
+                <a class="btn btn-red btn-lg" href="#produk">Belanja Sekarang</a>
+                <a class="btn btn-outline-light btn-lg" href="#koleksi">Lihat Koleksi</a>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
       <main>
-        <section id="layanan" class="container py-5">
-          <h2 class="section-title text-center mb-4">Layanan Kami</h2>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="service-card p-3 h-100">
-                <h3 class="card-title mb-2">Layanan 1</h3>
-                <p class="card-text mb-3">Deskripsi layanan pertama yang kami tawarkan.</p>
-                <a class="btn btn-primary" href="#">Detail</a>
-              </div>
+        <section id="koleksi" class="section-space">
+          <div class="container">
+            <div class="mb-4">
+              <p class="section-eyebrow">Koleksi</p>
+              <h2 class="section-title">Pilihan gaya utama</h2>
+              <p class="section-lead">Layout dibuat lebih besar dari sebelumnya, dengan foto koleksi sebagai fokus utama supaya toko terlihat lebih hidup.</p>
             </div>
-            <div class="col-md-4">
-              <div class="service-card p-3 h-100">
-                <h3 class="card-title mb-2">Layanan 2</h3>
-                <p class="card-text mb-3">Deskripsi layanan kedua yang kami tawarkan.</p>
-                <a class="btn btn-primary" href="#">Detail</a>
+
+            <div class="row g-4">
+              <div class="col-md-4">
+                <article class="collection-card">
+                  <img src="asset/img/model-home-red.jpg" alt="Model memakai jersey merah">
+                  <div class="collection-overlay">
+                    <h3>Home Red</h3>
+                    <p class="mb-0">Warna merah klasik untuk tampilan paling ikonik.</p>
+                  </div>
+                </article>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="service-card p-3 h-100">
-                <h3 class="card-title mb-2">Layanan 3</h3>
-                <p class="card-text mb-3">Deskripsi layanan ketiga yang kami tawarkan.</p>
-                <a class="btn btn-primary" href="#">Detail</a>
+              <div class="col-md-4">
+                <article class="collection-card">
+                  <img src="asset/img/model-away-white.jpg" alt="Model memakai jersey putih">
+                  <div class="collection-overlay">
+                    <h3>Away White</h3>
+                    <p class="mb-0">Putih bersih, ringan, dan mudah dipadukan.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="collection-card">
+                  <img src="asset/img/model-third-black.jpg" alt="Model memakai jersey hitam">
+                  <div class="collection-overlay">
+                    <h3>Third Black</h3>
+                    <p class="mb-0">Hitam elegan dengan aksen kuning yang tegas.</p>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="testimoni" class="container pb-5">
-          <h2 class="section-title text-center mb-4">Testimoni Pengguna</h2>
-          <div class="row justify-content-center">
-            <div class="col-sm-8 col-md-5 col-lg-3">
-              <div class="testimonial-card p-3">
-                <h3 class="card-title mb-2">Pengguna 1</h3>
-                <p class="card-text mb-0">Layanan yang sangat memuaskan!</p>
+        <section id="produk" class="section-space band-soft">
+          <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between gap-3 mb-4">
+              <div>
+                <p class="section-eyebrow">Produk</p>
+                <h2 class="section-title">Produk pilihan</h2>
+              </div>
+              <p class="section-lead mb-0">Setiap produk ditampilkan dengan gambar, harga, ukuran, dan tombol pesan supaya terasa seperti katalog toko online.</p>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-sm-6 col-lg-3">
+                <article class="product-card">
+                  <img class="product-image" src="asset/img/jersey-home-red.jpg" alt="Jersey merah pria">
+                  <div class="p-3">
+                    <h3>Home Red Jersey</h3>
+                    <p class="text-muted mb-2">Bahan adem, cocok untuk match day.</p>
+                    <p class="price mb-3">Rp 189.000</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="size-badge">M</span>
+                      <span class="size-badge">L</span>
+                      <span class="size-badge">XL</span>
+                    </div>
+                    <a class="btn btn-red w-100" href="#">Pesan</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <article class="product-card">
+                  <img class="product-image" src="asset/img/jersey-away-white.jpg" alt="Jersey putih pria">
+                  <div class="p-3">
+                    <h3>Away White Jersey</h3>
+                    <p class="text-muted mb-2">Clean look untuk gaya santai.</p>
+                    <p class="price mb-3">Rp 179.000</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="size-badge">S</span>
+                      <span class="size-badge">M</span>
+                      <span class="size-badge">L</span>
+                    </div>
+                    <a class="btn btn-red w-100" href="#">Pesan</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <article class="product-card">
+                  <img class="product-image" src="asset/img/jersey-third-black.jpg" alt="Jersey hitam pria">
+                  <div class="p-3">
+                    <h3>Third Black Jersey</h3>
+                    <p class="text-muted mb-2">Aksen kuning untuk look premium.</p>
+                    <p class="price mb-3">Rp 199.000</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="size-badge">M</span>
+                      <span class="size-badge">L</span>
+                      <span class="size-badge">XXL</span>
+                    </div>
+                    <a class="btn btn-red w-100" href="#">Pesan</a>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                <article class="product-card">
+                  <img class="product-image" src="asset/img/jersey-training-red.jpg" alt="Jersey training merah">
+                  <div class="p-3">
+                    <h3>Training Red Kit</h3>
+                    <p class="text-muted mb-2">Ringan untuk latihan dan futsal.</p>
+                    <p class="price mb-3">Rp 169.000</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="size-badge">S</span>
+                      <span class="size-badge">M</span>
+                      <span class="size-badge">XL</span>
+                    </div>
+                    <a class="btn btn-red w-100" href="#">Pesan</a>
+                  </div>
+                </article>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="pricing" class="container pb-5">
-          <h2 class="section-title text-center mb-4">Pricing Plan</h2>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="pricing-card h-100 text-center overflow-hidden">
-                <div class="pricing-header bg-primary">Paket Basic</div>
-                <div class="p-3">
-                  <p class="price mb-2">$19.99/bulan</p>
-                  <ul class="list-unstyled mb-3">
-                    <li>Fitur 1</li>
-                    <li>Fitur 2</li>
-                    <li>Fitur 3</li>
+        <section id="paket" class="section-space">
+          <div class="container">
+            <div class="text-center mx-auto mb-4">
+              <p class="section-eyebrow">Paket</p>
+              <h2 class="section-title">Paket hemat pembelian</h2>
+              <p class="section-lead mx-auto">Bagian pricing lama diubah menjadi paket belanja agar sesuai dengan website kaos pria.</p>
+            </div>
+
+            <div class="row g-4 align-items-stretch">
+              <div class="col-md-4">
+                <article class="package-card">
+                  <h3>Starter</h3>
+                  <p class="price">Rp 189.000</p>
+                  <ul class="package-list">
+                    <li>1 jersey pilihan</li>
+                    <li>Free stiker kecil</li>
+                    <li>Garansi tukar ukuran</li>
                   </ul>
-                  <a class="btn btn-primary" href="#">Pilih Paket</a>
-                </div>
+                  <a class="btn btn-outline-dark w-100" href="#">Pilih Paket</a>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="package-card featured">
+                  <h3>Best Deal</h3>
+                  <p class="price">Rp 349.000</p>
+                  <ul class="package-list">
+                    <li>2 jersey bebas pilih</li>
+                    <li>Free packing premium</li>
+                    <li>Diskon ongkir lokal</li>
+                  </ul>
+                  <a class="btn btn-red w-100" href="#">Pilih Paket</a>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="package-card">
+                  <h3>Squad</h3>
+                  <p class="price">Rp 499.000</p>
+                  <ul class="package-list">
+                    <li>3 jersey untuk tim kecil</li>
+                    <li>Bonus nomor sablon</li>
+                    <li>Prioritas stok ukuran</li>
+                  </ul>
+                  <a class="btn btn-outline-dark w-100" href="#">Pilih Paket</a>
+                </article>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="pricing-card h-100 text-center overflow-hidden">
-                <div class="pricing-header bg-success">Paket Premium</div>
-                <div class="p-3">
-                  <p class="price mb-2">$29.99/bulan</p>
-                  <ul class="list-unstyled mb-3">
-                    <li>Fitur 1</li>
-                    <li>Fitur 2</li>
-                    <li>Fitur 3</li>
-                  </ul>
-                  <a class="btn btn-success" href="#">Pilih Paket</a>
-                </div>
+          </div>
+        </section>
+
+        <section id="testimoni" class="section-space band-dark">
+          <div class="container">
+            <div class="row align-items-end mb-4">
+              <div class="col-lg-7">
+                <p class="section-eyebrow">Testimoni</p>
+                <h2 class="section-title">Dipakai untuk harian, tetap siap buat match day.</h2>
+              </div>
+              <div class="col-lg-5">
+                <p class="mb-0 text-white-50">Ulasan pembeli dibuat lebih lengkap agar section ini tidak kosong seperti layout sebelumnya.</p>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="pricing-card h-100 text-center overflow-hidden">
-                <div class="pricing-header bg-warning">Paket Pro</div>
-                <div class="p-3">
-                  <p class="price mb-2">$49.99/bulan</p>
-                  <ul class="list-unstyled mb-3">
-                    <li>Fitur 1</li>
-                    <li>Fitur 2</li>
-                    <li>Fitur 3</li>
-                  </ul>
-                  <a class="btn btn-warning" href="#">Pilih Paket</a>
-                </div>
+
+            <div class="row g-4">
+              <div class="col-md-4">
+                <article class="testimonial-card text-dark">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <img class="testimonial-avatar" src="asset/img/customer-avatar.jpg" alt="Foto pembeli">
+                    <div>
+                      <h3 class="h5 mb-0 fw-bold">Raka</h3>
+                      <p class="mb-0 text-muted">Pembeli Home Red</p>
+                    </div>
+                  </div>
+                  <p class="mb-0">Bahannya ringan dan jatuhnya rapi. Dipakai futsal juga tetap nyaman.</p>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="testimonial-card text-dark">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <img class="testimonial-avatar" src="asset/img/model-red-alt.jpg" alt="Foto pembeli jersey merah">
+                    <div>
+                      <h3 class="h5 mb-0 fw-bold">Dimas</h3>
+                      <p class="mb-0 text-muted">Pembeli Paket Best Deal</p>
+                    </div>
+                  </div>
+                  <p class="mb-0">Warna merahnya tegas, jahitan aman, dan pengiriman cepat.</p>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <article class="testimonial-card text-dark">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <img class="testimonial-avatar" src="asset/img/model-third-black.jpg" alt="Foto pembeli jersey hitam">
+                    <div>
+                      <h3 class="h5 mb-0 fw-bold">Fajar</h3>
+                      <p class="mb-0 text-muted">Pembeli Third Black</p>
+                    </div>
+                  </div>
+                  <p class="mb-0">Model hitamnya keren untuk nongkrong, bukan cuma buat nonton bola.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta-band section-space">
+          <div class="container">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <p class="section-eyebrow text-white">RedKit Store</p>
+                <h2 class="mb-3">Siapkan outfit terbaik untuk musim ini.</h2>
+                <p class="mb-0 text-white-50">Katalog ini sudah memakai gambar lokal, jadi siap dipindahkan ke GitHub sebagai website statis.</p>
+              </div>
+              <div class="col-lg-4 text-lg-end">
+                <a class="btn btn-light btn-lg" href="#produk">Lihat Produk</a>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <div class="divider"></div>
-
-      <footer class="text-center py-3">
-        <p class="mb-2">&copy; 2024 BrandLogo. All rights reserved. | <a href="#">Privacy Policy</a></p>
-        <div>
-          <a class="mx-2" href="#">Facebook</a>
-          <a class="mx-2" href="#">Twitter</a>
-          <a class="mx-2" href="#">Instagram</a>
+      <footer class="py-4">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+            <p class="mb-0">&copy; 2026 RedKit Store. All rights reserved.</p>
+            <div class="d-flex gap-3">
+              <a href="#">Instagram</a>
+              <a href="#">WhatsApp</a>
+              <a href="#">Marketplace</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
