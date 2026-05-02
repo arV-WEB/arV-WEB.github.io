@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tugas Bootstrap 1115</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <style>
+      body {
+        background-color: #ffffff;
+        color: #42464d;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .page-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        background-color: #ffffff;
+      }
+
+      .navbar {
+        padding-top: 0.2%;
+        padding-bottom: 0.2%;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        font-size: 82%;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+      }
+
+      .navbar-nav {
+        gap: 0;
+      }
+
+      .nav-item {
+        background-color: transparent;
+        margin-left: 4%;
+        padding-left: 1%;
+        padding-right: 1%;
+      }
+
+      .nav-item:first-child {
+        margin-left: 0;
+      }
+
+      .nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        white-space: nowrap;
+      }
+
+      .hero {
+        width: 100%;
+        padding: 7% 4%;
+        background-color: #2f2f2f;
+      }
+
+      .hero h1 {
+        font-size: 190%;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 90%;
+      }
+
+      .section-title {
+        font-size: 150%;
+        font-weight: 700;
+      }
+
+      .service-card,
+      .testimonial-card,
+      .pricing-card {
+        border: thin solid #d9dde3;
+        border-radius: 1%;
+      }
+
+      .service-card {
+        min-height: 100%;
+      }
+
+      .card-title {
+        font-size: 90%;
+        font-weight: 700;
+      }
+
+      .card-text,
+      .pricing-card li {
+        font-size: 78%;
+      }
+
+      .btn {
+        font-size: 78%;
+        font-weight: 600;
+      }
+
+      .pricing-header {
+        border-radius: 1% 1% 0 0;
+        color: #ffffff;
+        font-size: 78%;
+        font-weight: 700;
+        padding: 3% 5%;
+      }
+
+      .pricing-card .price {
+        font-size: 105%;
+        font-weight: 700;
+      }
+
+      .divider {
+        padding-top: 0.6%;
+        background-color: #212529;
+      }
+
+      footer {
+        background-color: #212529;
+        color: #ffffff;
+        font-size: 78%;
+      }
+
+      footer a {
+        color: #ffffff;
+      }
+
+      @media (max-width: 48em) {
+        .hero {
+          padding: 13% 6%;
+        }
+
+        .hero h1 {
+          font-size: 160%;
+        }
+
+        .nav-link {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .navbar-nav {
+          gap: 0;
+        }
+
+        .nav-item {
+          margin-left: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">BrandLogo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#layanan">Layanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimoni">Testimonial</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <header id="home" class="hero d-flex align-items-center justify-content-center text-center text-white">
+        <div>
+          <h1 class="mb-3">Selamat Datang di Situs Kami</h1>
+          <p class="mb-4">Kami memberikan layanan terbaik untuk kebutuhan Anda</p>
+          <a class="btn btn-primary" href="#layanan">Pelajari Lebih Lanjut</a>
+        </div>
+      </header>
+
+      <main>
+        <section id="layanan" class="container py-5">
+          <h2 class="section-title text-center mb-4">Layanan Kami</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="service-card p-3 h-100">
+                <h3 class="card-title mb-2">Layanan 1</h3>
+                <p class="card-text mb-3">Deskripsi layanan pertama yang kami tawarkan.</p>
+                <a class="btn btn-primary" href="#">Detail</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-card p-3 h-100">
+                <h3 class="card-title mb-2">Layanan 2</h3>
+                <p class="card-text mb-3">Deskripsi layanan kedua yang kami tawarkan.</p>
+                <a class="btn btn-primary" href="#">Detail</a>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="service-card p-3 h-100">
+                <h3 class="card-title mb-2">Layanan 3</h3>
+                <p class="card-text mb-3">Deskripsi layanan ketiga yang kami tawarkan.</p>
+                <a class="btn btn-primary" href="#">Detail</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimoni" class="container pb-5">
+          <h2 class="section-title text-center mb-4">Testimoni Pengguna</h2>
+          <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-5 col-lg-3">
+              <div class="testimonial-card p-3">
+                <h3 class="card-title mb-2">Pengguna 1</h3>
+                <p class="card-text mb-0">Layanan yang sangat memuaskan!</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing" class="container pb-5">
+          <h2 class="section-title text-center mb-4">Pricing Plan</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="pricing-card h-100 text-center overflow-hidden">
+                <div class="pricing-header bg-primary">Paket Basic</div>
+                <div class="p-3">
+                  <p class="price mb-2">$19.99/bulan</p>
+                  <ul class="list-unstyled mb-3">
+                    <li>Fitur 1</li>
+                    <li>Fitur 2</li>
+                    <li>Fitur 3</li>
+                  </ul>
+                  <a class="btn btn-primary" href="#">Pilih Paket</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="pricing-card h-100 text-center overflow-hidden">
+                <div class="pricing-header bg-success">Paket Premium</div>
+                <div class="p-3">
+                  <p class="price mb-2">$29.99/bulan</p>
+                  <ul class="list-unstyled mb-3">
+                    <li>Fitur 1</li>
+                    <li>Fitur 2</li>
+                    <li>Fitur 3</li>
+                  </ul>
+                  <a class="btn btn-success" href="#">Pilih Paket</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="pricing-card h-100 text-center overflow-hidden">
+                <div class="pricing-header bg-warning">Paket Pro</div>
+                <div class="p-3">
+                  <p class="price mb-2">$49.99/bulan</p>
+                  <ul class="list-unstyled mb-3">
+                    <li>Fitur 1</li>
+                    <li>Fitur 2</li>
+                    <li>Fitur 3</li>
+                  </ul>
+                  <a class="btn btn-warning" href="#">Pilih Paket</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="divider"></div>
+
+      <footer class="text-center py-3">
+        <p class="mb-2">&copy; 2024 BrandLogo. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <div>
+          <a class="mx-2" href="#">Facebook</a>
+          <a class="mx-2" href="#">Twitter</a>
+          <a class="mx-2" href="#">Instagram</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
