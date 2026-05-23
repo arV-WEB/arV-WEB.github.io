@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xylitol Mint | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg brand-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand logo-mark" href="index.html">LOTTE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#flavors">Flavors</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#benefits">Benefits</a></li>
+          <li class="nav-item dropdown nav-hover-dropdown">
+            <button class="nav-link dropdown-toggle" id="aboutDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us <i data-lucide="chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu brand-dropdown" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+              <li><a class="dropdown-item" href="about.html#team">Why Xylitol</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row gap-2">
+          <a class="btn btn-brand" href="signup.html">Sign up</a>
+          <a class="btn btn-light-brand" href="signin.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="container-xl hero-content">
+      <div class="hero-stage">
+        <h1 class="hero-title">Fresh Sugar-Free Happiness</h1>
+        <p class="hero-copy">Enjoy sugar-free chewing gum with long-lasting mint freshness crafted for your everyday confidence.</p>
+        <figure class="hero-product-wrap">
+          <img class="hero-product" src="assets/Lotte__Xylitol__Lime_Mint-removebg-preview.png" alt="Lotte Xylitol lime mint pack">
+        </figure>
+        <span class="hero-balance" aria-hidden="true"></span>
+      </div>
+
+      <form class="hero-tools" id="productFilterForm">
+        <div class="tool-grid">
+          <button class="tool-control w-100" type="button" data-action="explore">
+            <span>Explore Flavors</span>
+            <i data-lucide="map-pin"></i>
+          </button>
+          <button class="tool-control w-100" type="button" data-action="buy">
+            <span>Buy Now</span>
+            <i data-lucide="shopping-bag"></i>
+          </button>
+          <label class="visually-hidden" for="priceRange">Price Range</label>
+          <select class="tool-control form-select" id="priceRange" aria-label="Price Range">
+            <option value="all">Price Range</option>
+            <option value="low">Under Rp20.000</option>
+            <option value="mid">Rp20.000 - Rp24.000</option>
+            <option value="high">Above Rp24.000</option>
+          </select>
+        </div>
+        <div class="tool-search-panel">
+          <input class="form-control" id="flavorSearch" type="search" placeholder="Search flavor">
+          <button class="btn search-icon" type="submit" aria-label="Search product"><i data-lucide="search"></i></button>
+        </div>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-space love-section">
+      <div class="container-xl">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img class="img-fluid product-stack mx-auto" src="assets/Xylitol - Permen Karet Bebas Gula - BLISTER.jpg" alt="Xylitol gum flavors">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title">Why People Love Xylitol</h2>
+            <p class="section-text">Enjoy sugar-free chewing gum with long-lasting mint freshness crafted for your everyday confidence.</p>
+            <div class="row g-4 mt-4 stats-row">
+              <div class="col-4"><strong>100%</strong><span>Sugar Free</span></div>
+              <div class="col-4"><strong>24H</strong><span>Long Lasting Flavor</span></div>
+              <div class="col-4"><strong>3</strong><span>Premium Flavors</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space" id="benefits">
+      <div class="container-xl">
+        <div class="section-heading text-center mx-auto">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-text">Experience long-lasting mint freshness with sugar-free chewing gum made for your everyday confidence.</p>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-xl-3">
+            <article class="benefit-card benefit-blue h-100">
+              <i data-lucide="heart"></i>
+              <h3>Sugar Free</h3>
+              <p>Enjoy guilt-free freshness with zero sugar in every chew.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="benefit-card benefit-purple h-100">
+              <i data-lucide="cloud"></i>
+              <h3>Fresh Breath</h3>
+              <p>Keep your breath fresh all day with long-lasting mint flavor.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="benefit-card benefit-rose h-100">
+              <i data-lucide="sun"></i>
+              <h3>Premium Mint Taste</h3>
+              <p>Crafted with premium mint flavor for a refreshing experience.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="benefit-card benefit-green h-100">
+              <i data-lucide="smile"></i>
+              <h3>Easy to Chew</h3>
+              <p>Soft texture and comfortable chewing anytime, anywhere.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space pt-0" id="flavors">
+      <div class="container-xl">
+        <div class="section-heading text-center mx-auto">
+          <h2 class="section-title">Our Flavors</h2>
+          <p class="section-text mb-0" id="productStatus">Choose a flavor or use the search tools above.</p>
+        </div>
+        <div class="row g-4 mt-2" id="productGrid">
+          <div class="col-md-6 col-xl-4 product-item" data-name="fresh mint" data-price="18000">
+            <article class="card flavor-card flavor-blue h-100">
+              <div class="flavor-image"><img src="assets/Lotte Xylitol Chewing Gum (Fresh Mint Flavor) Sugar Free Halal Vegan - 58 g per Bottle.jpg" alt="Xylitol fresh mint bottle"></div>
+              <div class="card-body">
+                <h3 class="card-title"><i data-lucide="flask-conical"></i>Fresh Mint</h3>
+                <p class="card-text">Classic mint freshness with sugar-free chewing comfort.</p>
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                  <button class="btn btn-brand btn-sm product-buy" type="button" data-product="Fresh Mint">Buy Now</button>
+                  <strong>Rp18.000</strong>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 product-item" data-name="blueberry mint" data-price="22000">
+            <article class="card flavor-card flavor-purple h-100">
+              <div class="flavor-image"><img src="assets/xilytol ungu besar.jpg" alt="Xylitol blueberry mint bottle"></div>
+              <div class="card-body">
+                <h3 class="card-title"><i data-lucide="cherry"></i>Blueberry Mint</h3>
+                <p class="card-text">Sweet blueberry flavor blended with refreshing mint sensation.</p>
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                  <button class="btn btn-brand btn-sm product-buy" type="button" data-product="Blueberry Mint">Buy Now</button>
+                  <strong>Rp22.000</strong>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4 product-item" data-name="lime mint" data-price="26000">
+            <article class="card flavor-card flavor-green h-100">
+              <div class="flavor-image"><img src="assets/Lotte, Xylitol, Lime Mint (38 pc).jpg" alt="Xylitol lime mint bottle"></div>
+              <div class="card-body">
+                <h3 class="card-title"><i data-lucide="sparkles"></i>Lime Mint</h3>
+                <p class="card-text">Refreshing lime mint flavor crafted for everyday freshness.</p>
+                <div class="d-flex justify-content-between align-items-center gap-3">
+                  <button class="btn btn-brand btn-sm product-buy" type="button" data-product="Lime Mint">Buy Now</button>
+                  <strong>Rp26.000</strong>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space testimonial-section">
+      <div class="container-xl">
+        <div class="section-heading text-center mx-auto">
+          <h2 class="section-title">What People Say About Xylitol</h2>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4">
+            <article class="card review-card h-100">
+              <img src="assets/XYLITOL candy 58g jar_6g blister pack.jpg" class="card-img-top" alt="Xylitol display">
+              <div class="card-body">
+                <div class="review-head">
+                  <div class="review-person">
+                    <img class="review-avatar" src="assets/whatsapp_gultom.jpeg" alt="Jersi Gultom review image">
+                    <div><strong>Jersi Gultom</strong><span>Ambon</span></div>
+                  </div>
+                  <small><i data-lucide="star"></i> 5.0</small>
+                </div>
+                <p>"I love the fresh mint taste because it feels clean, refreshing, and not too strong."</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="card review-card h-100">
+              <img src="assets/download (1).jpg" class="card-img-top" alt="Xylitol shelf">
+              <div class="card-body">
+                <div class="review-head">
+                  <div class="review-person">
+                    <img class="review-avatar" src="assets/whatsapp_sabranio.jpeg" alt="Sabranio review image">
+                    <div><strong>Sabranio</strong><span>Ngawi</span></div>
+                  </div>
+                  <small><i data-lucide="star"></i> 4.5</small>
+                </div>
+                <p>"Xylitol has become my favorite sugar-free gum because the flavor lasts much longer."</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="card review-card h-100">
+              <img src="assets/xylitol ungu.jpg" class="card-img-top" alt="Xylitol tube in hand">
+              <div class="card-body">
+                <div class="review-head">
+                  <div class="review-person">
+                    <img class="review-avatar" src="assets/whatsapp_raihan.jpeg" alt="Raihan NT review image">
+                    <div><strong>Raihan NT</strong><span>Bangka</span></div>
+                  </div>
+                  <small><i data-lucide="star"></i> 5.0</small>
+                </div>
+                <p>"It is perfect for everyday use because it feels fresh, practical, and easy to carry."</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space newsletter-section">
+      <div class="container-xl text-center">
+        <h2 class="section-title">Do You Have Any Questions?<br>Get Help From Us</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-4 my-4 fw-semibold">
+          <span><i data-lucide="circle-check"></i> Need Help Choosing a Flavor?</span>
+          <span><i data-lucide="circle-check"></i> Join Our Newsletter</span>
+        </div>
+        <form class="row g-3 justify-content-center newsletter-form">
+          <div class="col-md-6 col-lg-4">
+            <input class="form-control" type="email" placeholder="Enter your email address...">
+          </div>
+          <div class="col-auto">
+            <button class="btn btn-brand" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="brand-footer">
+    <div class="container-xl">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="logo-mark footer-logo" href="index.html">LOTTE</a>
+          <p>Experience premium mint freshness with low sugar and long-lasting flavor in every chew.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3>About</h3>
+          <a href="about.html">Our Story</a>
+          <a href="about.html#team">Our Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3>Support</h3>
+          <a href="contact.html">FAQ</a>
+          <a href="contact.html">Help Center</a>
+          <a href="contact.html">Terms</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3>Find Us</h3>
+          <a href="contact.html">Events</a>
+          <a href="contact.html">Locations</a>
+          <a href="contact.html">Newsletter</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h3>Our Social</h3>
+          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://x.com/">Twitter (x)</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="shopToast" class="toast brand-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-body">Product selected.</div>
+    </div>
+  </div>
+
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

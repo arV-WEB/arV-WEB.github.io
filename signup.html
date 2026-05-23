@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xylitol Mint | Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg brand-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand logo-mark" href="index.html">LOTTE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#flavors">Flavors</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#benefits">Benefits</a></li>
+          <li class="nav-item dropdown nav-hover-dropdown">
+            <button class="nav-link dropdown-toggle" id="aboutDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us <i data-lucide="chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu brand-dropdown" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+              <li><a class="dropdown-item" href="about.html#team">Why Xylitol</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row gap-2">
+          <a class="btn btn-brand active" href="signup.html">Sign up</a>
+          <a class="btn btn-light-brand" href="signin.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-page">
+    <div class="container-xl">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center text-lg-start">
+          <h1>Create Account</h1>
+          <p>Join the fresh side of chewing gum. Save favorite flavors and receive Xylitol updates.</p>
+        </div>
+        <div class="col-lg-5 ms-lg-auto">
+          <form class="card auth-card needs-brand-feedback">
+            <div class="card-body">
+              <h2>Sign Up</h2>
+              <p class="text-muted">Fill your information below.</p>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="signupName">Name</label>
+                  <input class="form-control" id="signupName" type="text" placeholder="Your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="signupBirthday">Birthday</label>
+                  <input class="form-control" id="signupBirthday" type="date" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="signupEmail">Email</label>
+                  <input class="form-control" id="signupEmail" type="email" placeholder="you@email.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="signupAddress">Address</label>
+                  <input class="form-control" id="signupAddress" type="text" placeholder="Enter your location">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="signupPassword">Password</label>
+                  <input class="form-control" id="signupPassword" type="password" placeholder="Strong password" required>
+                </div>
+              </div>
+              <button class="btn btn-blue w-100 mt-4" type="submit">Create Account</button>
+              <p class="terms-copy">By signing up, you agree to our <strong>Terms of Service</strong> and <strong>Privacy Policy</strong>.</p>
+              <p class="mt-3 mb-0 text-center">Already have account? <a href="signin.html">Sign in</a></p>
+              <p class="form-response mt-3 mb-0 text-center" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

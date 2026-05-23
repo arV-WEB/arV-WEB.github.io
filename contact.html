@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xylitol Mint | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg brand-navbar sticky-top">
+    <div class="container-xl">
+      <a class="navbar-brand logo-mark" href="index.html">LOTTE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#flavors">Flavors</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#benefits">Benefits</a></li>
+          <li class="nav-item dropdown nav-hover-dropdown">
+            <button class="nav-link dropdown-toggle" id="aboutDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              About Us <i data-lucide="chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu brand-dropdown" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+              <li><a class="dropdown-item" href="about.html#team">Why Xylitol</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row gap-2">
+          <a class="btn btn-brand" href="signup.html">Sign up</a>
+          <a class="btn btn-light-brand" href="signin.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="contact-hero text-center">
+      <div class="container-xl">
+        <h1>Contact Us</h1>
+        <p>Any question or remarks? Just write us a message!</p>
+      </div>
+    </section>
+
+    <section class="contact-body">
+      <div class="container-xl">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4">
+            <aside class="contact-info h-100">
+              <h2>Contact Information</h2>
+              <p>Have questions about our flavors or products? We'd love to hear from you.</p>
+              <div class="contact-list">
+                <span><i data-lucide="phone-call"></i>+62 811-2233-7890</span>
+                <span><i data-lucide="mail"></i>hello@xylitolmint.com</span>
+                <span><i data-lucide="map-pin"></i>Yogyakarta, Indonesia</span>
+              </div>
+            </aside>
+          </div>
+          <div class="col-lg-8">
+            <form class="card contact-card h-100 needs-brand-feedback">
+              <div class="card-body">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label class="form-label" for="firstName">First Name</label>
+                    <input class="form-control" id="firstName" type="text" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lastName">Last Name</label>
+                    <input class="form-control" id="lastName" type="text" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" type="email" placeholder="hello@email.com" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input class="form-control" id="phone" type="tel" placeholder="+62">
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <p class="form-label fw-bold">Select Subject?</p>
+                  <div class="d-flex flex-wrap gap-3">
+                    <label class="form-check"><input class="form-check-input" name="subject" type="radio" checked> Product Questions</label>
+                    <label class="form-check"><input class="form-check-input" name="subject" type="radio"> Flavor Suggestions</label>
+                    <label class="form-check"><input class="form-check-input" name="subject" type="radio"> Shipping Support</label>
+                    <label class="form-check"><input class="form-check-input" name="subject" type="radio"> Partnership</label>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control message-control" id="message" placeholder="Tell us your favorite flavor or ask us anything..." required></textarea>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button class="btn btn-brand px-5" type="submit">Send Message</button>
+                </div>
+                <p class="form-response mt-3 mb-0" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="brand-footer">
+    <div class="container-xl">
+      <div class="row g-4">
+        <div class="col-lg-4"><a class="logo-mark footer-logo" href="index.html">LOTTE</a><p>Experience premium mint freshness with low sugar and long-lasting flavor in every chew.</p></div>
+        <div class="col-6 col-lg-2"><h3>About</h3><a href="about.html">Our Story</a><a href="about.html#team">Our Team</a><a href="contact.html">Contact</a></div>
+        <div class="col-6 col-lg-2"><h3>Support</h3><a href="contact.html">FAQ</a><a href="contact.html">Help Center</a><a href="contact.html">Terms</a></div>
+        <div class="col-6 col-lg-2"><h3>Find Us</h3><a href="contact.html">Events</a><a href="contact.html">Locations</a><a href="contact.html">Newsletter</a></div>
+        <div class="col-6 col-lg-2"><h3>Our Social</h3><a href="https://www.instagram.com/">Instagram</a><a href="https://www.facebook.com/">Facebook</a><a href="https://x.com/">Twitter (x)</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
